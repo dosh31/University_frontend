@@ -11,8 +11,8 @@ export default ({mode}:{mode:string}) => {
             host: true,
             port: 3000,
             proxy: {
-                "/api": {
-                    target: process.env.VITE_API_URL
+                "/api": { 
+                    target: process.env.VITE_API_URL // при запросе к фронтенду на путь /api Vite перенаправит его на VITE_API_URL
                 }
             },
         },

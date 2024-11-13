@@ -96,13 +96,12 @@ services:
     depends_on:
       - minio
 
-#frontend:
-#     build: ./frontend
-#     container_name: frontend
- #    ports:
- #      - "3000:3000"
- #    environment:
-  #     - VITE_API_URL=http://django:8000
+frontend:
+    build: ./frontend     container_name: frontend
+    ports:
+      - "3000:3000"
+   environment: 
+     - VITE_API_URL=http://django:8000 #переменная окружения для того, чтобы фронтенд знал адрес бэкенда при запуске в докере
 
 volumes:
   pgdbdata: null
